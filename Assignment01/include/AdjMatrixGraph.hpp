@@ -1,13 +1,10 @@
-//
-//  File:   AdjMatrixGraph.hpp
-//  Author: Your Glorious Instructor
-//  Purpose:
-//  Implementation of the adjacency list implementation of the graph ADT
-//
+
 #pragma once
 #include <iostream>
 #include <vector>
 #include <list>
+#include <stack>
+#include <algorithm>
 #include "Graph.hpp"
 using namespace std;
 template <class N>
@@ -22,6 +19,7 @@ private:
     bool adjMatrix[maxSize][maxSize];
     NodeEntry *nodes[maxSize];
     int numNodes = 0;
+    stack<N> addedNodes;
     int findNodeInMatrix(N x){
         for (int j=0; j < numNodes; ++j)
         {
@@ -45,6 +43,9 @@ public:
     // Add the nodes in the list to graph
     AdjMatrixGraph(vector<N> newNodes, vector<pair<N,N>> newEdges)
     {
+        for (const auto &node : newNodes) {
+            addedNodes.push(node);
+        }
         adjMatrix = new NodeEntry[maxSize][maxSize];
         for (typename vector<N>::const_iterator it = newNodes.begin();
              it < newNodes.end();
@@ -105,6 +106,9 @@ public:
     }
     virtual void addNode(N node)
     {
+    
+        if (find(addedNodes.begin(), addedNodes.end(), node) == addedNodes.end()) {
+                
         NodeEntry *ne = new NodeEntry();
         ne->node = node;
         ne->index = numNodes;
