@@ -1,8 +1,3 @@
-//
-// File:   simplepath.cpp
-// Author: Your Glorious Instructor
-// Purpose:
-// Show that a path is in fact in a graph
 #include <gtest/gtest.h>
 
 #include <iostream>

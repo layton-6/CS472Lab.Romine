@@ -1,9 +1,3 @@
-//
-// File:   graphtest.cpp
-// Author: Your Glorious Instructor
-// Purpose:
-// Use GoogleTest to unit test a set of graph classes.
-//
 #include <gtest/gtest.h>
 #include "AdjListGraph.hpp"
 #include "AdjMatrixGraph.hpp"

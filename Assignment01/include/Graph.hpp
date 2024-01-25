@@ -1,9 +1,3 @@
-//
-//  File:   Graph.hpp
-//  Author: Your Glorious Instructor
-//  Purpose:
-//  Abstract base class (pure virtual class) for Graphs
-//
 #pragma once
 #include <vector>
 #include <utility>
