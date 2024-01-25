@@ -2,8 +2,10 @@
 // 00103649
 // Dr. Lewis CS472
 
-#include "AdjListGraph.hpp"
+//https://www.educative.io/answers/how-to-implement-dfs-in-cpp
+
 #include "AdjMatrixGraph.hpp"
+#include "AdjListGraph.hpp"
 #include <chrono>
 #include <iostream>
 
@@ -26,14 +28,14 @@ int main() {
 
     for (const auto& size : graphSizes) {
         AdjListGraph<int> adjListGraph = generateAdjListGraph(size, edgeProbability);
-        cout << "Adjacency List Graph with " << size << " nodes:" << endl;
+        cout << "AdjListGraph with " << size << " nodes:" << endl;
         double adjListTime = measureDFSExecutionTime(adjListGraph, 0);
-        cout << "DFS Execution Time: " << adjListTime << " seconds" << endl;
+        cout << "Depth First Search Execution Time: " << adjListTime << " seconds" << endl;
 
         AdjMatrixGraph<int> adjMatrixGraph = generateAdjMatrixGraphGraph(size, edgeProbability);
-        cout << "Adjacency Matrix Graph with " << size << " nodes:" << endl;
+        cout << "AdjMatrixGraph with " << size << " nodes:" << endl;
         double adjMatrixTime = measureDFSExecutionTime(adjMatrixGraph, 0);
-        cout << "DFS Execution Time: " << adjMatrixTime << " seconds" << endl;
+        cout << "Depth First Search Execution Time: " << adjMatrixTime << " seconds" << endl;
 
     }
 
