@@ -61,7 +61,7 @@ def closest_pair(pairs, dist_funct):
     else:
         return closest_pair_recursive(sorted(pairs)) 
 
-pairs = [(1, 2), (3, 7), (4, 9), (8, 8), (10, 4)]
+pairs = [(1, 2), (3, 7), (4, 2), (8, 8), (10, 4)]
 closest_pair, min_distance = closest_pair(pairs, 'euclidean')
 print(f'Closest Pair: {closest_pair}')
 print(f'Minimum Distance: {math.sqrt(min_distance)}')
