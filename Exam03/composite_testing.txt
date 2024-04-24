@@ -1,0 +1,13 @@
+https://www.geeksforgeeks.org/types-of-complexity-classes-p-np-conp-np-hard-and-np-complete/
+
+However, this algorithm is not efficient and has exponential time complexity. 
+The number of iterations in the for loop is not O(n), but rather O(2^(log n)), 
+which is exponential in the number of bits in the binary representation of n. 
+This is because the number of iterations is determined by the size of the input 
+in bits, not the value of the input itself. 
+
+This means that the algorithm is not a member of the complexity class P, which 
+contains all problems that can be solved in polynomial time. In fact, it is 
+believed that there is no polynomial-time algorithm for primality testing, and 
+that the problem is in the complexity class NP, but not in P unless P = NP.
+
